@@ -14,40 +14,56 @@
       justify-content: center;
       flex-direction: column;
       align-items: center;
-      
     }
-    .box{
-        width: 200px;
-        height: 50px;
-        background-color: rgb(244, 244, 49);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-weight: bold;
-        font-size: 20px;
-        margin: 5px;
-
-
-    }
-    #sheet{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    .wonbox{
-        background-color: rgb(25, 234, 14);
-    }
-    .highlightbox{
-        background-color: rgb(255, 0, 0);
+    .box {
+      width: 200px;
+      height: 50px;
+      background-color: rgb(244, 244, 49);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      font-size: 20px;
+      margin: 5px;
     }
 
+    /* Tablet */
+    @media (max-width: 1024px) {
+      .box {
+        width: 150px;
+      }
+    }
+
+    /* Mobile – show 2 per row */
+    @media (max-width: 768px) {
+      .box {
+        width: 45%;
+      }
+    }
+
+    /* Very small phones */
+    @media (max-width: 450px) {
+      .box {
+        width: 90%;
+      }
+    }
+
+    #sheet {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .wonbox {
+      background-color: rgb(25, 234, 14);
+    }
+    .highlightbox {
+      background-color: rgb(255, 0, 0);
+    }
   </style>
   <body>
     <h1>lottery</h1>
     <div class="lottery-container">
-      <div class="sheet" id="sheet">
-
-      </div>
+      <div class="sheet" id="sheet"></div>
       <h3 id="info"></h3>
       <button id="pick">pick number</button>
     </div>
